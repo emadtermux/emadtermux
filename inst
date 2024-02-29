@@ -1,0 +1,10 @@
+import requests
+from datetime import datetime
+import json
+from time import sleep
+
+session = requests.session()
+session.proxies = {}
+
+session.proxies['http'] = 'socks5h://localhost:9050'
+session.proxies['https'] = 'socks5h://localhost:9050'
